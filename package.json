@@ -1,0 +1,18 @@
+{
+  "name": "@scope/template-yarnpkg-typescript",
+  "description": "Template for yarnpkg with typescript and debug for vscode",
+  "packageManager": "yarn@3.2.3",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "shared/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -t run build",
+    "app-one:start": "yarn workspace @scope/app-one run start",
+    "app-one:dev": "yarn workspace @scope/app-one run dev"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}
